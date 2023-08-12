@@ -1,10 +1,19 @@
 const express = require('express');
 require('dotenv').config();
 const userRoute=require('./Routes/User.route')
-const connection=require('./Config/db')
+const connection = require('./Config/db');
+const cors = require('cors')
 const app = express();
 const PORT = process.env.port || 5001;
 
+// cors middleware
+app.use(cors());
+
+// express-json middleware
+
+app.use(express.json());
+
+// Basic route
 app.get('/', (req, res) => {
     res.status(200).json({ message: "Welcome to FlowChat App: Way to express yourself" })
 });
