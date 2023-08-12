@@ -8,7 +8,7 @@ const chatFlowRoute = express.Router();
 
 // create new Chat
 
-chatFlowRoute.post('/api/chat-flow', protected, chatFlowController.createChatFlow);
+chatFlowRoute.post('/api/chat-flows', protected, chatFlowController.createChatFlow);
 
 // get all chatFlows
 

@@ -5,7 +5,7 @@ const chatNodeSchema = new mongoose.Schema({
         type: String,
         // possible types
         enum: [
-            'test',
+            'text',
             'image',
             'button',
             'input',
