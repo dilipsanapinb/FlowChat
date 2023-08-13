@@ -1,0 +1,16 @@
+.sticky-nav{
+    height: 60px;
+}
+.static-nav {
+    height: 60px;
+}
+
+.static-nav  {
+    position: static;
+}
+
+.sticky-nav  {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
