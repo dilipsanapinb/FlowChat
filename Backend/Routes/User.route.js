@@ -19,7 +19,7 @@ userRoute.get("/api/users", async (req, res) => {
 });
 
 // Create the user
-userRoute.post("/api/create", async (req, res) => {
+userRoute.post("/api/register", async (req, res) => {
   try {
     const { name, email, password } = req.body;
     if (!name || !email || !password) {

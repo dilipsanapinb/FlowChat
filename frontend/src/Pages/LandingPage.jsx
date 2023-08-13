@@ -9,6 +9,7 @@ const LandingPage = () => {
                 <Navbar />
             </nav>
 
+            <h1>Langing page data</h1>
             <footer>
                 <Footer/>
             </footer>
