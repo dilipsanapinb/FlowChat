@@ -34,7 +34,7 @@ const [selectedNodeContent, setSelectedNodeContent] = useState('');
   useEffect(() => {
     const fetchChatNodes = async () => {
       try {
-        const response = await axios.get(`http://localhost:8001/chatNode/api/chat-flows/64d7664937cea2422e334e11/chat-nodes`);
+        const response = await axios.get(`https://chatflowbackend.onrender.com/chatNode/api/chat-flows/64d7664937cea2422e334e11/chat-nodes`);
         console.log(response.data.chatNodes);
         setNodes(response.data.chatNodes);
         setIsLoading(false);
@@ -52,7 +52,7 @@ const [selectedNodeContent, setSelectedNodeContent] = useState('');
     try {
 
       const token = JSON.parse(localStorage.getItem('userInfo'));
-      const response = await axios.post(`http://localhost:8001/chatNode/api/chat-nodes`, {
+      const response = await axios.post(`https://chatflowbackend.onrender.com/chatNode/api/chat-nodes`, {
       type: 'text', // Set the type based on your requirements
       content: newNodeContent,
       options: ["add text"], // Options array
@@ -78,7 +78,7 @@ const [selectedNodeContent, setSelectedNodeContent] = useState('');
   const handleDeleteNode = async (nodeId) => {
     try {
     const token = JSON.parse(localStorage.getItem('userInfo'));
-    await axios.delete(`http://localhost:8001/chatNode/api/chat-nodes/${nodeId}`, {
+    await axios.delete(`https://chatflowbackend.onrender.com/chatNode/api/chat-nodes/${nodeId}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -95,7 +95,7 @@ const [selectedNodeContent, setSelectedNodeContent] = useState('');
   try {
     const token = JSON.parse(localStorage.getItem('userInfo'));
     await axios.put(
-      `http://localhost:8001/chatNode/api/chat-nodes/${nodeId}`,
+      `https://chatflowbackend.onrender.com/chatNode/api/chat-nodes/${nodeId}`,
       { content },
       {
         headers: {
