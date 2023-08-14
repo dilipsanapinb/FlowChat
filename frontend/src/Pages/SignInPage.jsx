@@ -1,6 +1,6 @@
 import React from 'react'
-import Navbar from '../Components/Navbar/Navbar'
-import Footer from '../Components/Footer/Footer';
+import Navbar from '../Components/Navbar'
+import Footer from '../Components/Footer';
 import { Box, Container,Tab,TabList,TabPanel,TabPanels,Tabs,Text } from '@chakra-ui/react';
 import Login from '../Components/Authentication/Login';
 import Signup from '../Components/Authentication/Signup';

@@ -2,7 +2,8 @@ import './App.css';
 import{BrowserRouter as Router, Routes,Route} from "react-router-dom"
 import LandingPage from './Pages/LandingPage';
 import SignInPage from './Pages/SignInPage';
-import ChatPage from './Pages/ChatPage';
+import ChatFlowBuilder from './Pages/ChatFlowBuilder';
+
 function App() {
   return (
     <div className="App">
@@ -10,7 +11,7 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/signinpage" element={<SignInPage />} />
-          <Route path="/chatpage" element={<ChatPage />} />
+          <Route path='chatpage' element={ <ChatFlowBuilder/>} />
         </Routes>
       </Router>
     </div>

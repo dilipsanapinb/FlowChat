@@ -35,7 +35,7 @@ const Signup = () => {
                 email: email,
                 password:password
             }
-            let res = await fetch('http://localhost:8001/user/api/register', {
+            let res = await fetch('https://chatflowbackend.onrender.com/user/api/register', {
                 method:"POST",
                 headers: {
                     "Content-Type":"application/json"

@@ -8,6 +8,13 @@ chatNodeRoute.post('/api/chat-nodes', protected, ChatNodeController.createChatNo
 
 // get all chat nodes for specific chatFlow
 
-chatNodeRoute.get('/api/chat-flows/:chatFlowId/chat-nodes',ChatNodeController.getAllChatNodes)
+chatNodeRoute.get('/api/chat-flows/:chatFlowId/chat-nodes', ChatNodeController.getAllChatNodes);
+
+// edit the node
+
+chatNodeRoute.put('/api/chat-nodes/:id', protected, ChatNodeController.editChatNode);
+
+// Delete a chat node by ID
+chatNodeRoute.delete('/api/chat-nodes/:id', protected, ChatNodeController.deleteChatNode);
 
 module.exports=chatNodeRoute

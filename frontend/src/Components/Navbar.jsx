@@ -4,7 +4,6 @@ import {
     Link as ChakraLink,
     Button
 } from '@chakra-ui/react';
-import "./Navbar.css"
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import { BiSearch } from "react-icons/bi"
